@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://pdbj.org/molmil2/molmil.js"></script>
+  <script>
+    var molmil_settings = {src: "/molmil2/"}, canvas;
+    function initViewer() {
+      canvas = document.getElementById("molmilViewer");
+      molmil.autoSetup();
+canvas.molmilViewer.loadStructure("vas_barr_rank_0.pdb","pdb");
+      canvas.commandLine.run("cartoon_color red, chain A;");
+      canvas.commandLine.run("cartoon_color cyan, chain B;");
+      canvas.molmilViewer.setZoom(5.0);
+    }
+  </script>
+  <style>
+    #molmilViewer {
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+    #comments {
+      margin-top: 2px;
+      border: 1px solid #ccc;
+      background-color: #f7f7f7;
+      padding: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    #comments span.red {
+      color: red;
+    }
+    #comments span.cyan {
+      color: cyan;
+    }
+  </style>
+</head>
+<body onload="initViewer();">
+  <center>
+    <h3>Dimer structure predicted by alphafold2</h3>
+    <span class="molmil_UI_container">
+      <canvas id="molmilViewer" width="600" height="400"></canvas>
+    </span>
+    <div id="comments">
+<h4>AF2 prediction score = 0.291</h4>
+<p><span class="red">vas</span> - <span class="cyan">barr</span></p>
+    </div>
+  </center>
+</body>
+</html>
