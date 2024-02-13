@@ -8,12 +8,15 @@
             text-align: center; /* 本文のテキストを中央揃えにします */
             font-family: Arial, sans-serif; /* フォントスタイルを指定します */
             background-image: url('vas_png.jpg'); /* 背景画像を設定します */
-            background-size: cover; /* 背景画像をカバーとして設定し、画面全体にフィットさせます */
-            background-position: center; /* 背景画像を中央に配置します */
+            background-repeat: repeat; /* 背景画像をタイル状に繰り返します */
             color: #fff; /* テキストの色を白に変更します */
         }
         h1 {
-            color: #fff; /* 見出しの色も白に変更します */
+            color: #fff; /* 見出しの色を白に変更します */
+            background-color: rgba(0, 0, 0, 0.5); /* 見出しの背景を半透明の黒にしてテキストを強調します */
+            display: inline-block; /* 見出しの背景色をテキストの周囲に限定します */
+            padding: 10px 20px; /* 見出しの内側の余白を設定します */
+            margin-top: 20px; /* 見出しの上の余白を設定します */
         }
         ul.link-container {
             list-style: none; /* リストマーカーを非表示にします */
