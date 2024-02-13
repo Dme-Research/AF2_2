@@ -14,24 +14,31 @@
         ul.link-container {
             list-style: none; /* リストマーカーを非表示にします */
             padding: 0; /* 内側の余白をなくします */
-            display: inline-block; /* ブロックを中央揃えのためにインラインブロックにします */
-            text-align: left; /* リスト項目のテキストを左揃えに戻します */
+            margin: 0 auto; /* リストを中央揃えにします */
+            display: table; /* ブロックを中央揃えのためにテーブル表示に変更します */
         }
         .link-container li {
             margin: 20px 0; /* リスト項目の間の余白を設定します */
+            display: block; /* 各リスト項目をブロック要素として扱います */
         }
         .description {
-            margin-top: -15px; /* 説明文とリンクの間の余白を調整します */
             font-size: 0.9em; /* 説明文のフォントサイズを調整します */
             color: #666; /* 説明文の色を指定します */
+            margin-top: 5px; /* 説明文とリンクの間の余白を設定します */
         }
     </style>
 </head>
 <body>
     <h1>Dimer structure prediction by alphafold2</h1>
     <ul class="link-container">
-        <li><a href="index.html">Nuage_interactome</a><p class="description">explanation for Nuage</p></li>
-        <li><a href="Piwi.html">Piwi_interactome</a><p class="description">explanation for Piwi</p></li>
+        <li>
+            <a href="Nuage.html">Nuage_interactome</a>
+            <div class="description">explanation for Nuage</div>
+        </li>
+        <li>
+            <a href="Piwi.html">Piwi_interactome</a>
+            <div class="description">explanation for Piwi</div>
+        </li>
     </ul>
 </body>
 </html>
