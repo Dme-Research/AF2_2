@@ -1,38 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://pdbj.org/molmil2/molmil.js"></script>
-  <script>
-    var molmil_settings = {src: "/molmil2/"}, canvas;
-    function initViewer() {
-      canvas = document.getElementById("molmilViewer");
-      molmil.autoSetup();
-canvas.molmilViewer.loadStructure("vas_tej_rank_0.pdb","pdb");
-      canvas.commandLine.run("cartoon_color red, chain A;");
-      canvas.commandLine.run("cartoon_color cyan, chain B;");
-      canvas.molmilViewer.setZoom(5.0);
-    }
-  </script>
-  <style>
-    #molmilViewer {
-      border: 1px solid #ccc;
-      background-color: #fff;
-    }
-    #comments {
-      margin-top: 2px;
-      border: 1px solid #ccc;
-      background-color: #f7f7f7;
-      padding: 1px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    #comments span.red {
-      color: red;
-    }
-    #comments span.cyan {
-      color: cyan;
-    }
-  </style>
 </head>
 <body onload="initViewer();">
   <center>
